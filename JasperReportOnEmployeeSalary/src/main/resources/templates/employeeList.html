@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1000/xhtml">
+<head th:replace="common/header:: common-header" />
+</head>
+
+<body>
+	<div th:replace="common/header :: navbar"></div>
+	<div class="container">
+
+
+		<table class="table table-bordered" id="myTable">
+			<thead>
+				<tr>
+				<th>Name</th>
+				<th>Designation</th>
+				<th>Salary</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="e: ${listEmployee}">
+					<td th:text="${e.name}"></td>
+					<td th:text="${e.designation}"></td>
+					<td th:text="${e.salary}"></td>
+
+
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+
+	<div th:replace="common/header :: footer"></div>
+	<div th:replace="common/header :: body-bottom-scripts"></div>
+	<script>
+		$(document).ready(function() {
+			$('#myTable').DataTable();
+		});
+	</script>
+</body>
+</html>

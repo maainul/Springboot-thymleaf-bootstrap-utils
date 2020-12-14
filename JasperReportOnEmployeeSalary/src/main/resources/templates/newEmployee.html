@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1000/xhtml">
+<head th:replace="common/header:: common-header" />
+
+
+</head>
+<body>
+	<div th:replace="common/header :: navbar"></div>
+	<div class="container">
+
+		<form class="text-center border border-light p-5"
+			th:action="@{/saveEmployee}" th:object="${employee}"
+			method="POST">
+
+			<p class="h4 mb-4">Add Employee</p>
+
+			<!-- Name -->
+			<input type="text" name="name" class="form-control mb-4"
+				placeholder="Name of Employee">
+				
+				<!-- Name -->
+			<input type="text" name="designation" class="form-control mb-4"
+				placeholder="Designation">
+				
+				<!-- Name -->
+			<input type="text" name="salary" class="form-control mb-4"
+				placeholder="Enter Salary">
+				
+				<!-- Name -->
+			<!-- <input type="text" name="doj" class="form-control mb-4"
+				placeholder="department Name"> -->
+
+			<!-- Save button -->
+			<button class="btn btn-info btn-block" type="submit">Save</button>
+		</form>
+	</div>
+
+	<div th:replace="common/header :: footer"></div>
+	
+	<div th:replace="common/header :: body-bottom-scripts"></div>
+
+</body>
+</html>
