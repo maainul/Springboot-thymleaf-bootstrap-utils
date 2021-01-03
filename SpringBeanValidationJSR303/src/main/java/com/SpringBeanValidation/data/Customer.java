@@ -1,4 +1,4 @@
-package com.SpringBeanValidation.entity;
+package com.SpringBeanValidation.data;
 
 import java.io.Serializable;
 
